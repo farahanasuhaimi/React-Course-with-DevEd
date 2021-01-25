@@ -4,10 +4,9 @@ A React Course with DevEd. This repo is for me to go back to for the tips and ma
 
 ## TOC
 
-1. Javascript essentials
-2.
-3.
-4. Components
+- [1. Javascript essentials](#1-javascript-essentials)
+
+- [4. Components](#4-components)
 
 ### 1. Javascript essentials
 
