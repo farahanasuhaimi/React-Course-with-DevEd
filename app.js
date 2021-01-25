@@ -1,6 +1,6 @@
 const initialUsers = ["john", "Ed", "Becky"]
 
-const currentUsers = initialUsers
+const currentUsers = [...initialUsers]
 currentUsers.push("New Guy")
 
 console.log(initialUsers); // [ 'john', 'Ed', 'Becky', 'New Guy' ]

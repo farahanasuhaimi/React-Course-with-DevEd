@@ -24,4 +24,13 @@ console.log(initialUsers); // [ 'john', 'Ed', 'Becky', 'New Guy' ]
 console.log(currentUsers); // [ 'john', 'Ed', 'Becky', 'New Guy' ]
 ```
 
+- Rather doing the above, you can try to spread it.
+
+```javascript
+const currentUsers = [...initialUsers];
+currentUsers.push("New Guy");
+
+console.log(initialUsers); // [ 'john', 'Ed', 'Becky' ]
+```
+
 ### 4. Components
