@@ -5,7 +5,7 @@ A React Course with DevEd. This repo is for me to go back to for the tips and ma
 ## TOC
 
 - [1. Javascript essentials](#1-javascript-essentials)
-
+- [2. Deconstruction](#2-deconstruction)
 - [4. Components](#4-components)
 
 ### 1. Javascript essentials
@@ -60,6 +60,35 @@ sayHey("John"); // hey John
 const sayHello = (name) => `Hello ${name}`;
 const greeting = sayHello(`Johny`);
 console.log(greeting); // Hello Johny
+```
+
+### 2. Deconstruction
+
+Deconstruction is used to simplify dictionary.
+
+- Instead of using the usual definition;
+
+```javascript
+// Oldie
+const user = {
+  firstName: "Johny",
+  lastName: "Doe",
+  age: 20,
+};
+console.log(user.age); // 20
+
+// const { firstName, lastName, age } = user;
+// console.log(lastName); // Doe
+```
+
+- The script can be simplified as;
+
+```javascript
+// Newie
+const newUser = ["Johny", "Doe", 20];
+const [firstNameUser, surnameUser, ageUser] = newUser;
+
+console.log(firstNameUser); // Johny
 ```
 
 ### 4. Components

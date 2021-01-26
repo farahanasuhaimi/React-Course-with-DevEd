@@ -20,3 +20,22 @@ sayHey('John') // hey John
 const sayHello = name => `Hello ${name}`;
 const greeting = sayHello(`Johny`)
 console.log(greeting); // Hello Johny
+
+// Deconstruction
+
+// Oldie
+const user = {
+    firstName: 'Johny',
+    lastName: 'Doe',
+    age: 20,
+}
+
+const { firstName, lastName, age } = user;
+console.log(user.age);
+console.log(lastName); // Doe
+
+// Newie
+const newUser = ['Johny', 'Doe', 20];
+const [firstNameUser, surnameUser, ageUser] = newUser;
+
+console.log(firstNameUser); // Johny
