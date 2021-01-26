@@ -33,4 +33,26 @@ currentUsers.push("New Guy");
 console.log(initialUsers); // [ 'john', 'Ed', 'Becky' ]
 ```
 
+- Use the arrow functions rather than the usual one.
+
+```javascript
+// Oldie
+function sayHello(name) {
+  console.log("hey" + name);
+}
+
+sayHello("John"); // heyJohn
+```
+
+```javascript
+// Newie
+const sayHello = (name) => {
+  console.log(`hey ${name}`);
+};
+
+sayHello("John"); // hey John
+```
+
+- Use backtick (`) for the string and quote as example above.
+
 ### 4. Components
