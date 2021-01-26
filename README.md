@@ -37,22 +37,29 @@ console.log(initialUsers); // [ 'john', 'Ed', 'Becky' ]
 
 ```javascript
 // Oldie
-function sayHello(name) {
+function sayHey(name) {
   console.log("hey" + name);
 }
 
-sayHello("John"); // heyJohn
+sayHey("John"); // heyJohn
 ```
 
 ```javascript
 // Newie
-const sayHello = (name) => {
+const sayHey = (name) => {
   console.log(`hey ${name}`);
 };
 
-sayHello("John"); // hey John
+sayHey("John"); // hey John
 ```
 
 - Use backtick (`) for the string and quote as example above.
+- When use with one line return function with one input, it can be simplified as this;
+
+```javascript
+const sayHello = (name) => `Hello ${name}`;
+const greeting = sayHello(`Johny`);
+console.log(greeting); // Hello Johny
+```
 
 ### 4. Components

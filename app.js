@@ -10,8 +10,13 @@ console.log(currentUsers); // [ 'john', 'Ed', 'Becky', 'New Guy' ]
 
 // Use arrow functions
 
-const sayHello = (name) => {
+const sayHey = (name) => {
     console.log(`hey ${name}`);
 }
 
-sayHello('John') // hey John
+sayHey('John') // hey John
+
+// Simplify the arrow function with 1 input and 1 line output.
+const sayHello = name => `Hello ${name}`;
+const greeting = sayHello(`Johny`)
+console.log(greeting); // Hello Johny
