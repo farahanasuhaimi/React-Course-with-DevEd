@@ -29,9 +29,9 @@ const user = {
     lastName: 'Doe',
     age: 20,
 }
+console.log(user.age); // 20
 
 const { firstName, lastName, age } = user;
-console.log(user.age);
 console.log(lastName); // Doe
 
 // Newie
