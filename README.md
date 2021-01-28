@@ -6,6 +6,7 @@ A React Course with DevEd. This repo is for me to go back to for the tips and ma
 
 - [1. Javascript essentials](#1-javascript-essentials)
 - [2. Deconstruction](#2-deconstruction)
+- [3. Map, Filter and Reduce](#3-map,-filter-and-reduce)
 - [4. Components](#4-components)
 
 ### 1. Javascript essentials
@@ -90,5 +91,42 @@ const [firstNameUser, surnameUser, ageUser] = newUser;
 
 console.log(firstNameUser); // Johny
 ```
+
+### 3. Map, Filter and Reduce
+
+- Map can be used to get the array without spreading (`...`).
+- Map is suitable to get certain information in the array.
+
+```javascript
+const users = [
+  { name: "Ed", age: 25 },
+  { name: "Led", age: 100 },
+  { name: "Zed", age: 20 },
+];
+
+const userAgeOnly = users.map((user) => user.age);
+console.log(userAgeOnly); // return the default age array
+```
+
+- However, when some changes made in the mapped array, it reflects on the former array too.
+
+```javascript
+const modifiedUserAge = users.map((user) => (user.age = 9));
+console.log(users);
+// [
+//   { name: 'Ed', age: 9 },
+//   { name: 'Led', age: 9 },
+//   { name: 'Zed', age: 9 }
+// ]
+```
+
+- Filter can be used to get certain elements in the array
+
+```javascript
+const filterUser = users.filter((user) => user.age === 20);
+console.log(filterUser); // return none as the user array has changed.
+```
+
+- Reduce is used to transform an array into single object
 
 ### 4. Components
