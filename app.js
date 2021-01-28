@@ -65,3 +65,14 @@ console.log(filterUser); // return none as the user array has changed.
 // Reducing
 
 const sumUserAge = users.reduce((user) => )
+
+// Example of component
+
+function Tweet() {
+    return (
+        <div>
+            <h2>Tweet</h2>
+            <p>This is a tweet from a component.</p>
+        </div>
+    )
+}

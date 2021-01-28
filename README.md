@@ -134,4 +134,11 @@ console.log(filterUser); // return none as the user array has changed.
 - A component has:
   1. its own functionality (i.e. button for stop and play),
   2. can be reusable
-  3. easy to scale up
+  3. easy to scale up and
+  4. has its own styling.
+- A component also can hold other component(s).
+
+### Why React
+
+1. we can split each function to be each component
+2. we can make one big component such as Blog and fill up all the components needed inside it and call Blog once.
