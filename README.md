@@ -127,6 +127,11 @@ const filterUser = users.filter((user) => user.age === 20);
 console.log(filterUser); // return none as the user array has changed.
 ```
 
-- Reduce is used to transform an array into single object
+- Reduce is used to transform an array into single object ??
 
 ### 4. Components
+
+- A component has:
+  1. its own functionality (i.e. button for stop and play),
+  2. can be reusable
+  3. easy to scale up
