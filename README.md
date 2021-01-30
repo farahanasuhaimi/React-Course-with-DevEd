@@ -8,8 +8,8 @@ A React Course with DevEd. This repo is for me to go back to for the tips and ma
 - [2. Deconstruction](#2-deconstruction)
 - [3. Map, Filter and Reduce](#3-map,-filter-and-reduce)
 - [4. Components](#4-components)
-- [React Rule-of-thumbs](react-rule-of-thumbs)
-- [ Why React](why-react)
+- [React Rule-of-thumbs](#react-rule-of-thumbs)
+- [ Why React](#why-react)
 ### 1. Javascript essentials
 
 - Uses `const` and `let`
