@@ -6,10 +6,10 @@ A React Course with DevEd. This repo is for me to go back to for the tips and ma
 
 - [1. Javascript essentials](#1-javascript-essentials)
 - [2. Deconstruction](#2-deconstruction)
-- [3. Map, Filter and Reduce](#3-map,-filter-and-reduce)
+- [3. Map, Filter and Reduce](#3-map\,-filter-and-reduce)
 - [4. Components](#4-components)
 - [React Rule-of-thumbs](#react-rule-of-thumbs)
-- [ Why React](#why-react)
+- [Why React](#why-react)
 ### 1. Javascript essentials
 
 - Uses `const` and `let`
@@ -140,6 +140,10 @@ console.log(filterUser); // return none as the user array has changed.
 - A component also can hold other component(s).
 
 ### React Rule-of-thumbs
+
+1. Use `className` for `class` in REact JSX.
+2. As we are using webpack, we can create component in different files. 
+3. Name component file with Pascal Case, i.e. `TestComponent.js` and have it the same name as filename.
 
 ### Why React
 
