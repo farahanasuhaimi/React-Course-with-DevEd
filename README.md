@@ -6,10 +6,12 @@ A React Course with DevEd. This repo is for me to go back to for the tips and ma
 
 - [1. Javascript essentials](#1-javascript-essentials)
 - [2. Deconstruction](#2-deconstruction)
-- [3. Map, Filter and Reduce](#3-map\,-filter-and-reduce)
+- [3. Map, Filter and Reduce](#3-map,-filter-and-reduce)
 - [4. Components](#4-components)
 - [React Rule-of-thumbs](#react-rule-of-thumbs)
 - [Why React](#why-react)
+- [Tips](#tips)
+
 ### 1. Javascript essentials
 
 - Uses `const` and `let`
@@ -142,10 +144,43 @@ console.log(filterUser); // return none as the user array has changed.
 ### React Rule-of-thumbs
 
 1. Use `className` for `class` in REact JSX.
-2. As we are using webpack, we can create component in different files. 
+2. As we are using webpack, we can create component in different files.
 3. Name component file with Pascal Case, i.e. `TestComponent.js` and have it the same name as filename.
 
 ### Why React
 
 1. we can split each function to be each component
 2. we can make one big component such as Blog and fill up all the components needed inside it and call Blog once.
+
+### Tips
+
+1. Props:
+
+- Can be passed down but cannot be passed back to parents and siblings.
+
+2. State :
+
+- React re-render the UI each time state changes.
+- It is only reflected on the screen, but not the data itself.
+- to update the data, set the `value` to the first state.
+- Examples:
+
+  ```javascript
+  import React, { useState } from "react";
+
+  function App() {
+    // Setting the state from "Stranger"
+    const [name, setName] = useState("Stranger");
+
+    // Create the function
+    const sayHelloHandler = (e) => {
+      setName = "new User";
+    };
+    return (
+      <div>
+        <h1>Hello {name}</h1>
+        <button onClick={sayHelloHandler}>Click</button>
+      </div>
+    );
+  }
+  ```
