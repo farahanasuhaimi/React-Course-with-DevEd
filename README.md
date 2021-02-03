@@ -149,8 +149,9 @@ Deconstruction is used to simplify dictionary.
 
 ### Why React
 
-1. we can split each function to be each component
-2. we can make one big component such as Blog and fill up all the components needed inside it and call Blog once.
+1. It is a dynamic javascript in which it react to every changes on the page without refreshing (i.e. get new set of data) to make/show the changes.
+2. we can split each function to be each component
+3. we can make one big component such as Blog and fill up all the components needed inside it and call Blog once.
 
 ### Tips
 
@@ -182,6 +183,7 @@ Deconstruction is used to simplify dictionary.
 - It is only reflected on the screen, but not the data itself.
 - to update the data, set the `value` to the first state.
 - Similar to props, can only be passed down.
+- But it can be lifted up (brought up to the parent component) and share to the child component.
 
 2. Props:
 
