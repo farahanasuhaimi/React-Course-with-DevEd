@@ -158,6 +158,7 @@ Deconstruction is used to simplify dictionary.
 1. State :
 
 - React re-render the UI each time state changes.
+- Act a litte like variable that hold the data.
 - Example:
 
   ```javascript
