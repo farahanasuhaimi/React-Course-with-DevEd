@@ -158,8 +158,7 @@ Deconstruction is used to simplify dictionary.
 1. State :
 
 - React re-render the UI each time state changes.
-- Act a little like variable that hold the data.
-- Example:
+- Act a little like variable that hold new data.
 
   ```javascript
   import React, { useState } from "react";
@@ -168,9 +167,9 @@ Deconstruction is used to simplify dictionary.
     // Setting the state from "Stranger"
     const [name, setName] = useState("Stranger");
 
-    // Create the function
+    // Create the function to change the state to "New User"
     const sayHelloHandler = (e) => {
-      setName = "new User";
+      setName = "New User";
     };
     return (
       <div>
@@ -207,6 +206,7 @@ Deconstruction is used to simplify dictionary.
   };
   ```
 
+- To avoid refreshing
 - Similar to props, can only be passed down.
 - But it can be lifted up (brought up to the parent component) and share to the child component.
 
@@ -240,6 +240,61 @@ Deconstruction is used to simplify dictionary.
         <button onClick={() => setName("John")}>Click</button> // Setting the arrow
         function
       </div>
+    );
+  };
+  ```
+
+3. Prevent Page Refreshing
+
+- React is dynamic where it dynamically update each changes without getting new data.
+- For instance, to avoid refreshing in "form submission operation", we can prevent the default by:
+  ```javascript
+  const submitTweetHandler = (e) => {
+    e.preventDefault(); // Prevent default refreshing but act like it has been refreshed.
+    console.log("Hey");
+  };
+  return (
+    <form onSubmit={submitTweetHandler}>
+      <textarea
+        value={textInput}
+        onChange={userInputHandler}
+        cols="50"
+        rows="5"
+      ></textarea>
+      <button>Submit</button>
+    </form>
+  );
+  ```
+
+4. Use Spreading to append data in an array
+
+- With spreading, the in used variable will not change.
+- The new variable (an array) will have the in-used variable with appends of new data.
+
+  ```javascript
+  const CreateTweet = () => {
+    //State
+    const [textInput, setTextInput] = useState("");
+    const [tweets, setTweets] = useState([]);
+    // Function
+    const userInputHandler = (e) => {
+      setTextInput(e.target.value);
+    };
+    const submitTweetHandler = (e) => {
+      e.preventDefault();
+      setTweets([...tweets, textInput]); // The used of spreading
+      // setTweets (new array) will have tweets (in-used variable/array) with textInput (new data) appended.
+    };
+    return (
+      <form onSubmit={submitTweetHandler}>
+        <textarea
+          value={textInput}
+          onChange={userInputHandler}
+          cols="50"
+          rows="5"
+        ></textarea>
+        <button>Submit</button>
+      </form>
     );
   };
   ```

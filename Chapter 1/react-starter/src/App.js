@@ -12,7 +12,7 @@ return (
   <div>
     <h1>Tweeter Here</h1>
       <CreateTweet/>
-      <TweetList name={name} message={message}/>
+      <TweetList setName={setName} name={name} message={message}/>
 
   </div>
   )
