@@ -10,6 +10,7 @@ A React Course with DevEd. This repo is for me to go back to for the tips and ma
 - [4. Components](#4-components)
 - [React Rule-of-thumbs](#react-rule-of-thumbs)
 - [Why React](#why-react)
+- [React Playground](#react-playground)
 - [Tips](#tips)
 
 ### 1. Javascript essentials
@@ -153,9 +154,9 @@ Deconstruction is used to simplify dictionary.
 2. we can split each function to be each component
 3. we can make one big component such as Blog and fill up all the components needed inside it and call Blog once.
 
-### Tips
+### React Playground
 
-1. State :
+#### 1. State :
 
 - React re-render the UI each time state changes.
 - Act a little like variable that hold new data.
@@ -210,7 +211,7 @@ Deconstruction is used to simplify dictionary.
 - Similar to props, can only be passed down.
 - But it can be lifted up (brought up to the parent component) and share to the child component.
 
-2. Props:
+#### 2. Props:
 
 - Can be passed down but cannot be passed back to parent and sibling components.
 - However, when invoking the function with parantheses (i.e. with input), always use the arrow function declaration.
@@ -244,7 +245,9 @@ Deconstruction is used to simplify dictionary.
   };
   ```
 
-3. Prevent Page Refreshing
+### Tips
+
+1. Prevent Page Refreshing
 
 - React is dynamic where it dynamically update each changes without getting new data.
 - For instance, to avoid refreshing in "form submission operation", we can prevent the default by:
@@ -266,9 +269,9 @@ Deconstruction is used to simplify dictionary.
   );
   ```
 
-4. Use Spreading to append data in an array
+2. Use Spreading to append data in an array
 
-- With spreading, the in used variable will not change.
+- With spreading, the in-used variable/array will not change.
 - The new variable (an array) will have the in-used variable with appends of new data.
 
   ```javascript
@@ -298,3 +301,9 @@ Deconstruction is used to simplify dictionary.
     );
   };
   ```
+
+3. State/Props Lifting
+
+- To access a prop or state, one must have it in the parent components.
+- The trick is, to lift up the prop or state to each parent components, so that both child components could access it.
+- In the codes above, `createTweet` and `Tweet` are both sibling with `App` as parent. Thus, by lifting the props and states to their parents, both can be passed down.
