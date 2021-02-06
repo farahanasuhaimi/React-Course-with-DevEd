@@ -158,7 +158,7 @@ Deconstruction is used to simplify dictionary.
 1. State :
 
 - React re-render the UI each time state changes.
-- Act a litte like variable that hold the data.
+- Act a little like variable that hold the data.
 - Example:
 
   ```javascript
@@ -183,6 +183,30 @@ Deconstruction is used to simplify dictionary.
 
 - It is only reflected on the screen, but not the data itself.
 - to update the data, set the `value` to the first state.
+
+  ```javascript
+  const CreateTweet = () => {
+    //State
+    const [textInput, setTextInput] = useState("");
+    // Function
+    const userInputHandler = (e) => {
+      setTextInput(e.target.value);
+    };
+    return (
+      <form>
+        <textarea
+          value={textInput}
+          onChange={userInputHandler}
+          cols="50"
+          rows="5"
+        ></textarea>
+        <button>Submit</button>
+        <h1 onClick={() => setTextInput("")}>{textInput}</h1>
+      </form>
+    );
+  };
+  ```
+
 - Similar to props, can only be passed down.
 - But it can be lifted up (brought up to the parent component) and share to the child component.
 
