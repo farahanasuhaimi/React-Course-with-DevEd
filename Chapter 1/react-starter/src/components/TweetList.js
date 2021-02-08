@@ -6,7 +6,7 @@ const TweetList = ({name, tweets, setTweets}) => {
         <div className='tweet-list'>
             {/* Map each data in tweets to the Tweet Component. */}
             {tweets.map((tweet) => (
-            <Tweet name={name} message={tweet} setTweets={setTweets} />
+            <Tweet name={name} tweet={tweet} tweets={tweets} setTweets={setTweets} />
             ))} 
         </div>
     )
