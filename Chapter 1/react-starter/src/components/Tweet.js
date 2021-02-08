@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Tweet = ({name, message, setTweets) => {
+const Tweet = ({name, message, setTweets}) => {
     const deleteTweet = () => {
         console.log('Hey');
     }
