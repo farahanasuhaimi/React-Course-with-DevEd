@@ -1,9 +1,14 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import TweetList from "./components/TweetList"
 import CreateTweet from "./components/CreateTweet"
 
 function App() {
- //State
+    useEffect(() => {
+      
+      console.log("Hey You");
+    }, [])
+
+    //State
     const [textInput, setTextInput] = useState("") // make it empty
     const [tweets, setTweets] = useState([]) // make it empty array
     const [name, setName] = useState('Farahana')
