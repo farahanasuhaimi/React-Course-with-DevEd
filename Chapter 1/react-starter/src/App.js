@@ -3,10 +3,6 @@ import TweetList from "./components/TweetList"
 import CreateTweet from "./components/CreateTweet"
 
 function App() {
-    useEffect(() => {
-      
-      console.log("Hey You");
-    }, [])
 
     //State
     const [textInput, setTextInput] = useState("") // make it empty

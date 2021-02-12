@@ -245,6 +245,24 @@ Deconstruction is used to simplify dictionary.
   };
   ```
 
+#### 3. useEffect
+
+- To give effect when the app or component was executed.
+
+  ```javascript
+  useEffect(() => {
+    effect;
+    return () => {
+      cleanup;
+    };
+  }, [input]);
+  ```
+
+- Use case scenarios:
+  - Send request
+  - Get database
+  - Preview something
+
 ### Tips
 
 1. Prevent Page Refreshing
@@ -268,6 +286,8 @@ Deconstruction is used to simplify dictionary.
     </form>
   );
   ```
+
+````
 
 2. Use Spreading to append data in an array
 
@@ -307,3 +327,4 @@ Deconstruction is used to simplify dictionary.
 - To access a prop or state, one must have it in the parent components.
 - The trick is, to lift up the prop or state to each parent components, so that both child components could access it.
 - In the codes above, `createTweet` and `Tweet` are both sibling with `App` as parent. Thus, by lifting the props and states to their parents, both can be passed down.
+````
