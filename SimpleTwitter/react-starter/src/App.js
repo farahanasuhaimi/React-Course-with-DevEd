@@ -3,6 +3,8 @@ import TweetList from "./components/TweetList"
 import CreateTweet from "./components/CreateTweet"
 
 function App() {
+    
+    
 
     //State
     const [textInput, setTextInput] = useState("") // make it empty
@@ -12,6 +14,12 @@ function App() {
     const sayHelloHandler = (e) => {
       setName('Farahana Suhaimi') 
     }
+    
+    useEffect(() => {
+      
+      console.log("Hey You");
+    }, [])
+    
     return (
       <div>
         <h1>Tweeter Here</h1>

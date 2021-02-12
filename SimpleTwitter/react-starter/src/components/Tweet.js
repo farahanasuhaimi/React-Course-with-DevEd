@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import styled from 'styled-components'
 
 const Tweet = ({name, tweet, tweets, setTweets}) => {
@@ -6,10 +6,6 @@ const Tweet = ({name, tweet, tweets, setTweets}) => {
         setTweets(tweets.filter((state) => state.id !== tweet.id))
     }
 
-        useEffect(() => {
-      
-      console.log("Hey You");
-    }, [])
     return (
         <TweetStyled className='Tweet'>
             <h2>Name: {name}</h2>
