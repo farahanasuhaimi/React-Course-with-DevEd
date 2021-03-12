@@ -1,10 +1,11 @@
-import React, {useState} from "react"
-import Player from './components/Player'
-import Song from './components/Song'
+import React, { useState } from "react";
+import Player from "./components/Player";
+import Song from "./components/Song";
+import library from "./components/Library";
+import "./styles/app.scss";
 
-import './styles/app.scss'
-
-import data from "./data"
+import data from "./data";
+import Library from "./components/Library";
 
 function App() {
   // State
@@ -14,12 +15,13 @@ function App() {
 
   return (
     <div className="App">
-        <Song currentSong = {currentSong} />
-        <Player 
-          isPlaying = {isPlaying} 
-          setIsPlaying = {setIsPlaying} 
-          currentSong = {currentSong}
-        />
+      <Song currentSong={currentSong} />
+      <Player
+        isPlaying={isPlaying}
+        setIsPlaying={setIsPlaying}
+        currentSong={currentSong}
+      />
+      <Library songs={songs} />
     </div>
   );
 }
