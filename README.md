@@ -127,7 +127,7 @@ Deconstruction is used to simplify dictionary.
 - Filter can be used to get certain elements in the array
 
   ```javascript
-  const filterUser = users.filter((user) => user.age === 20);
+  const filterUser = users.filter((user) => user.age === 20));
   console.log(filterUser); // return none as the user array has changed.
   ```
 
